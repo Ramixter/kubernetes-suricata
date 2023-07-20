@@ -37,3 +37,7 @@ kubectl create configmap suricata-config --from-file=suricata.yaml=suricata.yaml
 kubectl create configmap suricata-rules --from-file=suricata.rules
 kubectl create -f suricata-daemonset.yaml
 ```
+
+# Checking Suricata
+
+The rules that we have configured are to perform a test using ICMP packets through Ping that have been configured in the [suricata.rules](suricata.rules)([suricata-rules.yaml](suricata-rules.yaml)) file
