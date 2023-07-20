@@ -7,6 +7,8 @@ The configuration files that we will use are the following:
 - [suricata-configmap.yaml](suricata-configmap.yaml)
 - [suricata-rules.yaml](suricata-rules.yaml)
 - [suricata-daemonset.yaml](suricata-daemonset.yaml)
+- [suricata.yaml](suricata.yaml)
+- [suricata.rules](suricata.rules)
 
 ---
 
