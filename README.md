@@ -44,4 +44,25 @@ The rules that we have configured are to perform a test using ICMP packets throu
 
 Suppose we have 3 nodes in our cluster with which we are going to do the tests to verify that our configuration works.
 
+```text
+NAME             READY   STATUS    RESTARTS   AGE   IP             NODE           NOMINATED NODE   READINESS GATES
+suricata-7547n   1/1     Running   0          84s   192.168.49.4   master         <none>           <none>
+suricata-lrhml   1/1     Running   0          84s   192.168.49.2   worker-1       <none>           <none>
+suricata-s4gms   1/1     Running   0          84s   192.168.49.3   worker-2       <none>           <none>
+```
+
+Now if we ping any of the nodes we can verify that the suricata is recording the activity.
+
+```bash
+ping <NODE-IP>
+```
+
+```bash
+kubectl exec -it <POD_NAME> -- cat /var/log/suricata/fast.log
+```
+
+```bash
+kubectl exec -it <POD_NAME> -- cat /var/log/suricata/eve.json
+```
+
 
