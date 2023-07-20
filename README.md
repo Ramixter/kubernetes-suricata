@@ -1,1 +1,1 @@
-# kubernetes-suricata
+# Suricata & Kubernetes
