@@ -27,6 +27,10 @@ The configuration files that we will use are the following:
 >
 > Example
 
+
+> **Example**
+Your note text here
+
 # Setting up the configuration
 
 We have the files [suricata.yaml](suricata.yaml) and [suricata.rules](suricata.rules) which are the ones that we will have to modify for the configuration of Suricata inside the nodes.
