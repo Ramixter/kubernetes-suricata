@@ -37,7 +37,8 @@ We have the files [suricata.yaml](suricata.yaml) and [suricata.rules](suricata.r
 
 In our case we are going to create a configuration file [suricata-suricata.yaml](suricata-suricata.yaml) with the content of [suricata.yaml](suricata.yaml) to be able to create additional configurations. In the same way we will create the file [suricata-rules.yaml](suricata-rules.yaml) with the content of [suricata.rules](suricata.rules) to proceed to create the rules that we want suricata to be executing.
 
-  >In our case we are going to create a configuration file [suricata-suricata.yaml](suricata-suricata.yaml) with the content of [suricata.yaml](suricata.yaml) to be able to create additional configurations. In the same way we will create the file [suricata-rules.yaml](suricata-rules.yaml) with the content of [suricata.rules](suricata.rules) to proceed to create the rules that we want suricata to be executing.
+- Nuevo:
+   >In our case we are going to create a configuration file [suricata-suricata.yaml](suricata-suricata.yaml) with the content of [suricata.yaml](suricata.yaml) to be able to create additional configurations. In the same way we will create the file [suricata-rules.yaml](suricata-rules.yaml) with the content of [suricata.rules](suricata.rules) to proceed to create the rules that we want suricata to be executing.
 
 
 # Applying the configuration
