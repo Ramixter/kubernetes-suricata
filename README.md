@@ -19,6 +19,14 @@ The configuration files that we will use are the following:
 >
 > Ejemplo
 
+
+> <picture>
+>   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/example.svg">
+>   <img alt="Example" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/example.svg">
+> </picture><br>
+>
+> Example
+
 # Setting up the configuration
 
 We have the files [suricata.yaml](suricata.yaml) and [suricata.rules](suricata.rules) which are the ones that we will have to modify for the configuration of Suricata inside the nodes.
