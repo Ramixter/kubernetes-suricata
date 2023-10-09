@@ -17,7 +17,7 @@ The configuration files that we will use are the following:
 >   <img alt="Example" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/example.svg">
 > </picture><br>
 >
-> Example
+> Ejemplo
 
 # Setting up the configuration
 
