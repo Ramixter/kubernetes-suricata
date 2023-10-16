@@ -1,4 +1,4 @@
-name: "CodeQL"
+name: "CodeQL and Linters"
 
 on:
   push:
@@ -27,14 +27,22 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Install yamllint
+    - name: Install yamllint and hadolint
       run: |
-        pip install yamllint
-    
-    - name: Install hadolint
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y hadolint
+        if [[ "$RUNNER_OS" == "Linux" ]]; then
+          sudo apt-get update
+          sudo apt-get install -y yamllint
+          sudo apt-get install -y software-properties-common
+          sudo add-apt-repository universe
+          sudo apt-get update
+          sudo apt-get install -y hadolint
+        elif [[ "$RUNNER_OS" == "macOS" ]]; then
+          brew install yamllint
+          brew install hadolint
+        else
+          echo "Unsupported OS: $RUNNER_OS"
+          exit 1
+        fi
 
     - name: Lint YAML files
       run: |
