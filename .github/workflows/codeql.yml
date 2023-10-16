@@ -35,7 +35,8 @@ jobs:
           sudo apt-get install -y software-properties-common
           sudo add-apt-repository universe
           sudo apt-get update
-          sudo apt-get install -y hadolint
+          sudo apt-get install -y curl
+          curl -Lo hadolint https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64
         elif [[ "$RUNNER_OS" == "macOS" ]]; then
           brew install yamllint
           brew install hadolint
@@ -43,6 +44,8 @@ jobs:
           echo "Unsupported OS: $RUNNER_OS"
           exit 1
         fi
+        chmod +x hadolint
+        sudo mv hadolint /usr/local/bin/
 
     - name: Lint YAML files
       run: |
