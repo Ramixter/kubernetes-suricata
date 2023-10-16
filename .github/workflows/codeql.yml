@@ -27,11 +27,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Install yamllint and hadolint
+    - name: Install yamllint
       run: |
         pip install yamllint
-        brew install hadolint  # En macOS, instala hadolint (puedes usar otro método en otras plataformas)
     
+    - name: Install hadolint
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y hadolint
+
     - name: Lint YAML files
       run: |
         find . -name '*.yaml' -o -name '*.yml' | xargs yamllint
